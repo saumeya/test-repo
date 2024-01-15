@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: multipod-deployment
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: multipod-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: httpd-container
-          image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+          image: image-registry.openshift-image-registry.svc:5000/openshift/java:latest
 #          image: image-registry.openshift-image-registry.svc:5000/openshift/java        
           command: ["sleep", "4800"]
         - name: nginx-container
