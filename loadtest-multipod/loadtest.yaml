@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: multipod-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: multipod-app
